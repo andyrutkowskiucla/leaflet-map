@@ -57,14 +57,14 @@ var darkAll = new L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.ne
 });
 controlLayers.addBaseLayer(darkAll, 'CartoDB DarkAll');
 
-var darkNoLabels = new L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_nolabels/{z}/{x}/{y}.png', {
+var darkNoLabels = new L.tileLayer('https://api.mapbox.com/styles/v1/andy-rutkowski/cj5iim2s955ja2rrx1kkj1un6/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiYW5keS1ydXRrb3dza2kiLCJhIjoiWDJRMFVUWSJ9.iHl6Cf0M79wmHQlfP6Bk8Q', {
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
 });
 controlLayers.addBaseLayer(darkNoLabels, 'CartoDB Dark no labels');
 
 // Esri satellite map from http://leaflet-extras.github.io/leaflet-providers/preview/
 // OR use esri-leaflet plugin and esri basemap name https://esri.github.io/esri-leaflet/examples/switching-basemaps.html
-var Esri_WorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+var Esri_WorldImagery = L.tileLayer('https://api.mapbox.com/styles/v1/andy-rutkowski/cj5iim2s955ja2rrx1kkj1un6/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYW5keS1ydXRrb3dza2kiLCJhIjoiWDJRMFVUWSJ9.iHl6Cf0M79wmHQlfP6Bk8Q', {
    attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
 });
 controlLayers.addBaseLayer(Esri_WorldImagery, 'Esri World Imagery');
