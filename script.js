@@ -85,7 +85,7 @@ var hartfordCounty1855 = new L.tileLayer.wms("http://geoserver.lib.uconn.edu:808
 });
 controlLayers.addBaseLayer(hartfordCounty1855, 'Hartford County 1855');
 
-var map1842wms = new L.tileLayer.wms("http://maps.nypl.org/warper/maps/wms/7363?", {
+var map1842wms = new L.tileLayer.wms("https://api.mapbox.com/styles/v1/andy-rutkowski/cj5ij2u2056372srpho3je4dl/wmts?access_token=pk.eyJ1IjoiYW5keS1ydXRrb3dza2kiLCJhIjoiWDJRMFVUWSJ9.iHl6Cf0M79wmHQlfP6Bk8Q", {
   attribution: '1842 <a href="http://maps.nypl.org/warper/">NYPL Map Warper</a>'
 });
 controlLayers.addBaseLayer(map1842wms, '1842 NYPL WMS');
