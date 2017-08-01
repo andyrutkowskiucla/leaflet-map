@@ -71,7 +71,7 @@ controlLayers.addBaseLayer(Esri_WorldImagery, 'Esri World Imagery');
 
 // tileLayer.WMS as a baselayer - see http://leafletjs.com/reference.html#tilelayer-wms
 // UConn MAGIC WMS settings (currently http, not https) - see http://geoserver.lib.uconn.edu:8080/geoserver/web/?wicket:bookmarkablePage=:org.geoserver.web.demo.MapPreviewPage
-var aerial1934 = new L.tileLayer.wms("http://geoserver.lib.uconn.edu:8080/geoserver/MAGIC/wms?", {
+var aerial1934 = new L.tileLayer.wms("https://api.mapbox.com/styles/v1/andy-rutkowski/cj5iim2s955ja2rrx1kkj1un6.html?title=true&access_token=pk.eyJ1IjoiYW5keS1ydXRrb3dza2kiLCJhIjoiWDJRMFVUWSJ9.iHl6Cf0M79wmHQlfP6Bk8Q#11.0/33.966464/-118.285031/0", {
   layers: 'MAGIC:1934 Connecticut Aerial Photography',
   attribution: '1934 <a href="http://magic.library.uconn.edu">MAGIC UConn</a> and <a href="http://cslib.org">CSL</a>'
 });
