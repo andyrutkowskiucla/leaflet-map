@@ -42,7 +42,7 @@ map.on('click', function(e) {
 // use common baselayers below, delete, or add more with plain JavaScript from http://leaflet-extras.github.io/leaflet-providers/preview/
 // .addTo(map); -- suffix displays baselayer by default
 // controlLayers.addBaseLayer (variableName, 'label'); -- adds baselayer and label to legend; omit if only one baselayer with no toggle desired
-var lightAll = new L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
+var lightAll = new L.tileLayer('https://api.mapbox.com/styles/v1/andy-rutkowski/cj5iim2s955ja2rrx1kkj1un6/tiles/256/{z}/{x}/{y}', {
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
 }).addTo(map); // adds layer by default
 controlLayers.addBaseLayer(lightAll, 'CartoDB LightAll');
