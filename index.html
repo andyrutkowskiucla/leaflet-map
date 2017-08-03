@@ -1,31 +1,75 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>leaflet-map template</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-    <!-- Load Leaflet from a https CDN, not http. Look for updates at http://leafletjs.com/download.html -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css"/>
-    <!-- remove Coord Control and ZoomLabel (and also in script.js) after map contruction -->
-    <link rel="stylesheet" href="https://jackdougherty.github.io/Leaflet-Coordinates-Control/Control.Coordinates.css" />
-    <link rel="stylesheet" href="https://jackdougherty.github.io/leaflet.zoomlabel/L.Control.ZoomLabel.css" />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <!-- div to display map; add more for title and caption if desired -->
-    <div id="map"></div>
-    <!-- Load Leaflet from a https CDN, not http. Look for updates at http://leafletjs.com/download.html -->
-    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
-    <!-- load jQuery  -->
-    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
-    <!-- load Esri Leaflet -->
-    <script src="https://cdn.jsdelivr.net/leaflet.esri/2.0.7/esri-leaflet.js"></script>
-    <!-- Load leaflet-geocoder to search locations-->
-  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-geocoder-mapzen/1.8.0/leaflet-geocoder-mapzen.css">
-  	<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-geocoder-mapzen/1.8.0/leaflet-geocoder-mapzen.js"></script>
-    <!-- remove Coord Control and Zoom Label (and also in script.js) after map contruction -->
-    <script type="text/javascript" src="https://jackdougherty.github.io/Leaflet-Coordinates-Control/Control.Coordinates.js"></script>
-    <script type="text/javascript" src="https://jackdougherty.github.io/leaflet.zoomlabel/L.Control.ZoomLabel.js"></script>
-    <script type="text/javascript" src="script.js"></script>
-  </body>
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+ 
+<!-- Access jQuery Library -->
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+ 
+<!-- set some styles to make the map fill the page -->
+<style>
+/* Always set the map height explicitly to define the size of the div
+* element that contains the map. */
+#map 
+{
+	height: 100%;
+}
+/* Optional: Makes the sample page fill the window. */
+html, body 
+{
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+</style>
+ 
+<!-- add the google maps api library -->
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+ 
+<!-- let's get javascripting... -->
+<script type="text/javascript">
+//global variables
+var map;
+ 
+//function that runs when the page loads
+$( document ).ready(function() {
+    initialize();
+});
+ 
+// start the mapping
+function initialize() 
+{
+	//center lat/lon
+	var latlng = {lat:34.074152, lng:-118.439144}
+ 
+	//map configutations
+	var myOptions = {
+		zoom: 10,
+		center: latlng,
+		mapTypeId: google.maps.MapTypeId.ROADMAP
+	};
+ 
+	//create the map
+	map = new google.maps.Map(document.getElementById("map"), myOptions);
+
+//marker lat/lon
+var latlng = {lat:34.074152, lng:-118.439144}
+	//create the marker
+var marker = new google.maps.Marker({
+	position: latlng,
+	map: map,
+	title:"Hello World!"
+});
+
+}
+
+
+</script>
+</head>
+<!-- body of the page with an onload to run the initialize function -->
+<body>
+	<!-- the map container -->
+	<div id="map" style="width:100%; height:100%"></div>
+</body>
 </html>
